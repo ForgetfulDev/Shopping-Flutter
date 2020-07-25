@@ -12,8 +12,9 @@ Future main() async {
           title: Text('Shopping'),
           backgroundColor: Colors.blueGrey,
         ),
-        body: Center(
-          child: Text("test"),
+        body: Container(
+          child: Center( child: Text("test"),
+          ),
         ),
       ),
     ),
