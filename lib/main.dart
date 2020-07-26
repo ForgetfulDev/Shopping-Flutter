@@ -1,13 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-Future main() async {
-  await DotEnv().load('.env');
+void main() {
   runApp(MaterialApp(
     home: Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.orangeAccent,
       appBar: AppBar(
         centerTitle: true,
         title: Text('Shopping'),
@@ -26,16 +24,20 @@ class LoginPage extends StatelessWidget {
         children: [
           Expanded(
             child: Center(
-              child: FlatButton(
+              child: RaisedButton(
+                color: Colors.blueAccent,
+                textColor: Colors.white70,
                 onPressed: () {
-                  stderr.writeln('print me');
+                  print('show the text');
                 },
+                padding: const EdgeInsets.all(8.8),
                 child: Text(
-                  "Flat Button",
+                  "Login",
+                  style: TextStyle(fontSize: 20.0),
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
